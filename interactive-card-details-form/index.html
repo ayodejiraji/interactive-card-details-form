@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="index.css">
+
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+    <main class="content-grid">
+        <h1 class="visuallyhidden">Interactive Card Form</h1>
+        <div class="card-previews">
+          <div class="card-front">
+            <img class="card-front__bg" src="bg-card-front.png"alt="backgroung_image"/>
+            <img class="card-front__logo" src="card-logo.svg" alt="logo" />
+
+            <span class="card-front__number" id="output-number">0000 0000 0000 0000</span>
+            <span class="card-front__name" id="output-name">Jane Appleseed</span>
+            <p class="card-front__expiry"><span class="mm">mm</span> / <span class="yy">yy</span></p>
+          </div>
+  
+          <div class="card-back">
+            <img class="card-back__bg" src="bg-card-back.png" alt="card_back"/>
+            <span class="card-back__cvc" id="output-cvc">123</span>
+          </div>
+        </div>
+  
+        <form class="form" aria-label="cardholder_form" id="card-info">
+          <label id="cardholdernamelabel" for="cardholder_name"
+            >cardholder name</label
+          >
+          <input type="text" name="cardholder_name" id="cardholder_name"
+            autofocus title="Full Name" placeholder="e.g. Jane Appleseed" aria-describedby="cardholdernameinstructions" aria-labelledby="cardholdernamelabel" />
+          <p id="cardholdernameinstructions"> Wrong format - fullname must spaced out e.g firstname lastname </p>
+  
+          <label id="cardnumberlabel" for="card_number">card number</label>
+          <input id="card_number" type="text" title="Card Number" placeholder="e.g. 1234 5678 9123 0000" aria-describedby="cardnumberinstructions" aria-labelledby="cardnumberlabel" autocomplete="cc-number"/>
+          <p id="cardnumberinstructions"> wrong format, numbers only</p>
+
+          <div class="input-group">
+            <div class="group">
+              <label id="expirationdatelabel" for="expiration_month"
+                >Exp. Date (MM/YY)</label >
+              <div class="expdateinputs" id="exprdatescontainer">
+                <input id="expiration_month" type="text" placeholder="MM" title="Expiration Month" maxlength="2" aria-describedby="expirationdateinstruction" aria-labelledby="expirationdatelabel" autocomplete="bday-month"/>
+                <input id="expiration_year" type="text"title="Expiration year" placeholder="YY" maxlength="2"aria-describedby="expirationdateinstruction" aria-labelledby="expirationdatelabel" />
+              </div>
+              <p id="expirationdateinstruction"> Can't be blank</p>
+            </div>
+  
+            <div class="group">
+              <label id="cardcvclabel" for="card_cvc">cvc</label>
+              <input id="card_cvc" type="text"title="Cvc Number" placeholder="e.g. 123" maxlength="3" aria-describedby="cardcvcinstructions"aria-labelledby="cardcvclabel" />
+              <p id="cardcvcinstructions"> Can't be blank </p>
+            </div>
+          </div>
+  
+          <a href="index2.html"><button class="btn" type="submit" title="confirm" id="submitbtn">
+            Confirm
+          </button></a>
+        </form>
+  
+        
+  
+
+          </div>
+
+      </div>
+  </div>
+</body>
+</html>
